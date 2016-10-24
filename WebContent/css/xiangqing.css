@@ -1,0 +1,201 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: url(../images/bg3.jpg)repeat-y;
+	background-color: rgb(47,63,96);
+	background-attachment: fixed;
+}
+.header {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    line-height: 24px;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.tit {
+	font-family: "微软雅黑";
+	margin: 20px 172px;
+	
+}
+
+.wrap {
+	width: 1000px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.top-lift {
+	float: left;
+	margin-right: 100px;
+}
+
+.top-right {
+	float: left;
+	font-family: "微软雅黑";
+}
+
+.top-right-1 h1 {
+	font-size: 26px;
+	font-weight: bolder;
+}
+
+.top-right-2 {
+	
+	margin: 5px 0;
+	padding: 20px 0px;
+	line-height: 30px;
+}
+
+.top-right-2 .price {
+	color: red;
+	font-size: 26px;
+	font-weight: bolder;
+}
+
+.top-right-2 .mianfei {
+	color: white;
+	background-color: red;
+}
+
+.top-right-2 .jilv {
+	color: red;
+	text-decoration: underline;
+}
+
+.top-right-4 .shuliang {
+	float: left;
+	padding-right: 45px;
+}
+
+.top-right-4 .spinnerExample {
+	float: left;
+}
+
+.top-right-5 {
+	margin-top: 50px;
+}
+
+.foot {
+	background-color: red;
+}
+
+.mid {
+	padding-top: 30px;
+	clear: both;
+}
+
+.mid .biaoti {
+	background-color: gainsboro;
+	border: 1px dotted gainsboro;
+	padding: 13px 50px;
+}
+
+.pingjia_content {
+	border: 1px solid gray;
+	height: 150px;
+	position: relative;
+}
+
+.pingjia_content img {
+	float: left;
+	margin: 5px 10px 0px 5px;
+}
+
+.pingjia_cot {
+	float: left;
+	background-color: #9cf;
+	width: 902px;
+	margin-top: 5px;
+	height: 140px;
+	line-height: 25px;
+}
+
+.foot-top {
+	width: 100%;
+}
+
+.foot {
+	height: 200px;
+	background-color: #414141;
+	width: 100%;
+}
+
+.foot-top ul {
+	margin-left: 55px;
+}
+
+.foot-top li {
+	float: left;
+	font-size: 24px;
+	color: white;
+	padding: 30px 140px;
+	font-weight: bolder;
+}
+
+.foot-bottom {
+	clear: both;
+	padding-top: 40px;
+	width: 100%;
+}
+
+.nav {
+	width: 100%;
+}
+
+.item {
+	color: #fff;
+	font-size: 18px;
+	line-height: 51px;
+	font-family: "微软雅黑";
+	padding-left: 150px;
+	padding-right: 120px;
+	width: 120px;
+}
+
+.nav .text, .nav .split, .copyright {
+	color: #999;
+	font-size: 12px;
+}
+
+p {
+	text-align: center;
+}
+
+.nav {
+	padding-left: 500px;
+	width: 600px;
+}
+
+#btn {
+	width: 168px;
+	height: 49px;
+	font-size: 18px;
+	background-color: #fbf7f7;
+	color: #ab2b2b;
+}
+
+.text {
+	text-decoration: none;
+}
+
+.copyright {
+	padding-left: 16px;
+}
+
+.header a {
+	padding: 0px 10px;
+	letter-spacing: 1px;
+	color: #ddd;
+	display: block;
+	float: left;
+    
+}
+.header a:HOVER {
+	color: #fff;
+	text-decoration: none;
+}
+.header span{
+	color: #fff;
+}

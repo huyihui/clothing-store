@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="CartItemNameSpace">
+	<resultMap type="com.huyihui.model.CartItem" id="cartItemMap">
+		<id property="cartItid" column="c_id"></id>
+		<result property="cartItname" column="c_name"/>
+		<result property="cartItprice" column="c_price"/>
+		<result property="cartItsize" column="c_size"/>
+		<result property="cartItnum" column="c_num"/>
+		<result property="userid" column="c_userid"/>
+		<result property="cartItpho" column="c_photo"/>
+	</resultMap>
+<!-- 插入购物车-->
+	<insert id="addd" parameterType="int" >
+		insert into cartitem(c_name,c_price,c_size,c_num,c_userid,c_photo) values(#{cartItname},#{cartItprice},#{cartItsize},#{cartItnum},#{userid},#{cartItpho})
+	</insert>
+<!-- 查询添加到购物车的商品 -->
+	<select id="findproById" parameterType="com.huyihui.model.CartItem" resultMap="cartItemMap">
+		select * from cartitem where c_userid = #{userid}
+	</select>
+<!-- 删除商品 -->
+	<delete id="dellll" parameterType="int">
+		delete from cartitem where c_id=#{cartItid}
+	</delete>
+</mapper>

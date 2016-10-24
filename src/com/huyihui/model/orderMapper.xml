@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="OrderNameSpace">
+	<resultMap type="com.huyihui.model.Orders" id="orderMap">
+		<id property="orderid" column="o_id"></id>
+		<result property="ordername" column="o_name"/>
+		<result property="ordertime" column="o_time"/>
+		<result property="userid" column="u_id"/>
+	
+	</resultMap>
+<!-- 插入订单-->
+	<insert id="adddd" parameterType="int" >
+		insert into orders(o_name,o_time,u_id) values(#{ordername},#{ordertime},#{userid})
+	</insert>
+<!-- 查询订单 -->
+	<select id="findAll" resultMap="orderMap">
+		select * from orders
+	</select>
+<!-- 删除订单 -->
+	<delete id="del" parameterType="int" >
+	delete from orders where o_id=#{orderid}
+	</delete>
+</mapper>

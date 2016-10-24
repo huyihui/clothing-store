@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="UserNameSpace">
+	<resultMap type="com.huyihui.model.User" id="userMap">
+		<id property="userid" column="u_id"></id>
+		<result property="username" column="u_name"/>
+		<result property="userpwd" column="u_pwd"/>
+		<result property="userstatus" column="u_status"/>
+	</resultMap>
+	
+	<!-- 根据用户名和密码查询用户对象 -->
+	<select id="login" parameterType="com.huyihui.model.User" resultMap="userMap">
+		select * from user where u_name=#{username} and u_pwd = #{userpwd}
+	</select>
+	<!-- 注册用户-->
+	<insert id="regist" parameterType="int" >
+		insert into user(u_name,u_pwd,u_status) values(#{username},#{userpwd},2)
+	</insert>
+	<!-- 管理员查询所有普通用户 -->
+	<select id="findAlll" parameterType="int" resultMap="userMap">
+		select * from user where u_status=2
+	</select>
+	<!-- 管理员查询所有管理用户 -->
+	<select id="findAlll1" parameterType="int" resultMap="userMap">
+		select * from user where u_status=1
+	</select>
+	<!-- 管理员删除用户 -->
+	<delete id="deldel"  parameterType="int">
+		delete from user where u_id=#{userid}
+	</delete>
+	
+	<!-- 管理员更新用户1 -->
+	<select id="finduser" parameterType="com.huyihui.model.User" resultMap="userMap">
+		select * from user where u_id=#{userid}
+	</select>
+	<!-- 管理员更新用户2 -->
+	<update id="updaupda" parameterType="com.huyihui.model.User">
+		update user set u_name=#{username},u_pwd=#{userpwd} where u_id=#{userid}
+	</update>
+	<!-- 创建管理员用户 -->
+	<insert id="addadd" parameterType="int" >
+		insert into user(u_name,u_pwd,u_status) values(#{username},#{userpwd},#{userstatus})
+	</insert>
+</mapper>

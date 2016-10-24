@@ -1,0 +1,73 @@
+#b {
+	background: white;
+	
+	/*filter: alpha(opacity = 50); 支持 IE 浏览器*/
+	/*-moz-opacity: 0.50; 支持 FireFox 浏览器*/
+	/*opacity: 0.50; 支持 Chrome, Opera, Safari 等浏览器*/
+	
+	width:100%;
+	margin:150px auto;
+	
+	height:1400px;
+}
+#zs1{
+	background-color:white;
+	float:left;
+	width:30%;
+	height:400px;
+	line-height:400px
+}
+#zs2{
+	background-color:red;
+
+	float:left;
+	width:70%;
+	height:400px;
+	background: url(../images/168-g3.jpg);
+}
+#zs3{
+	background-color:black;
+	width: 1300px;
+	margin: 0 auto;
+	border: 3px solid white;
+	}
+	
+#content_left{
+background-color:black;
+	float:left;
+	border: 3px solid white;
+	width :500px;
+	height: 500px;
+	background: url(../images/111.jpg);
+}
+#content_mid{
+	float: left;
+	background-color: #FFFFFF;
+	border:3px solid white ;
+	width: 400px;
+	height: 500px;
+	margin: 0 10px;
+}
+#content_mid_t{
+	background-color: blueviolet;
+	width:400px;
+	height: 240px;
+	margin: 0px auto 5px ;
+	background: url(../images/sadg1.JPG);
+}
+#content_mid_f{
+	background-color: #FFFFFF;
+	width:400px;
+	height: 258px;
+	background:url(../images/awe1.jpg) no-repeat
+	;
+}
+#content_right{
+	float: right;
+	background-color: burlywood;
+	border: 3px solid white;
+	width:360px;
+	height: 500px;
+	background: url(../images/qwe111.PNG);
+}
+

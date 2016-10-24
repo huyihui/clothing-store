@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="TalkNameSpace">
+	<resultMap type="com.huyihui.model.Talk" id="talkMap">
+		<id property="talkid" column="t_id"></id>
+		<result property="talkusername" column="t_username"/>
+		<result property="talkneirong" column="t_neirong"/>
+	</resultMap>
+<!-- 添加评论-->
+	<insert id="add" parameterType="int" >
+		insert into talk(t_username,t_neirong) values(#{talkusername},#{talkneirong})
+	</insert>
+<!-- 查询评论 -->
+	<select id="findAll" resultMap="talkMap">
+		select * from talk
+	</select>
+<!-- 管理员删除评论 -->
+	<delete id="deldel"  parameterType="int">
+		delete from talk where t_id=#{talkid}
+	</delete>
+</mapper>
